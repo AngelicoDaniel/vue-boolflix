@@ -19,7 +19,7 @@ export default {
   },
   data() {
    return {
-    APIKey: '8570b8b0e80303c0c307748fd71cc35d',
+    apiKey: '8570b8b0e80303c0c307748fd71cc35d',
     searchText: '',
     films: [],
     series: []
@@ -31,9 +31,10 @@ export default {
       console.log(this.searchText);
       
       
-      axios.get( `https://api.themoviedb.org/3/movie/550?api_key=${this.APIKey}&query=${this.searchText}&language=it-IT` )
+      axios //.get( `https://api.themoviedb.org/3/movie/550?api_key=${this.apiKey}&query=${this.searchText}&language=it-IT`)
+           .get(`https://api.themoviedb.org/3/search/tv?api_key=${this.apiKey}&language=it_IT&query=${this.searchText}`)
            .then( (response) => {
-            console.log(response.data.response);
+            console.log(response.data.results);
            })
 
 
