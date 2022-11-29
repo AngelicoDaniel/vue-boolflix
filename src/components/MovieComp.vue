@@ -1,6 +1,13 @@
 <template>
     <div>
-        <CardComp/>
+        <CardComp
+        v-for="(elem, index) in films"
+        :key="index"
+        :titolo="elem.name"
+        :titoloOriginale="elem.original_name"
+        :lingua="elem.original_language"
+        :voto="elem.vote_average"
+        />
     </div>
 </template>
 
@@ -11,7 +18,8 @@ import CardComp from './CardComp.vue'
         name: 'MovieComp',
         components: {
             CardComp
-        }
+        },
+        props: ['films']
     }
 </script>
 

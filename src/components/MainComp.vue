@@ -1,11 +1,12 @@
 <template>
     <div>
-        <MovieComp/>
+        <MovieComp :films="films"/>
     </div>
 </template>
 
 <script>
 import MovieComp from './MovieComp.vue'
+
     export default {
         name: 'MainComp',
         components: {
