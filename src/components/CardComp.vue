@@ -1,13 +1,17 @@
 <template>
     <div class="card">
-        <div>{{cardInfo.titolo}}</div>
+        <h5>{{cardInfo.titolo}}</h5>
         <div v-if="cardInfo.titoloOriginale != cardInfo.titolo">{{cardInfo.titoloOriginale}}</div>
-        <!-- <div>{{cardInfo.lingua}} -->
-        <div v-if="flags.includes(cardInfo.lingua)">
-            <img :src="`../assets/{{cardInfo.lingua}}.png`" alt="">
+        <!-- <div>{{cardInfo.lingua}}</div> -->
+        <div v-if="flags.includes(cardInfo.lingua)" class="p-2">
+            <img :src="require(`../assets/img/${cardInfo.lingua}.png`)" alt="" class="flags">
+            <!-- <img :src=" '../assets/img/' + cardInfo.lingua + '.png' " height="100" width="100" alt=""/> -->
+        </div>
+        <div v-else>
+            <img src="../assets/not-found.png" alt="" class="flags">
         </div>
         <div>Voto: {{cardInfo.voto}}</div>
-        <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="">
+        <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
 
     </div>
 </template>
@@ -20,7 +24,7 @@
         },
         data() {
             return {
-                flags: ['en', 'it', 'jp', 'fr', 'de', 'es', 'ko']
+                flags: ['en', 'it', 'ja', 'fr', 'de', 'es', 'ko']
             } 
         }
     }
@@ -34,8 +38,11 @@
     margin: 10px;
     padding: 20px;
     align-items: center;
-    img{
+    .poster{
         width: 150px;
+    }
+    .flags{
+        width: 50px;
     }
 }
 </style>
