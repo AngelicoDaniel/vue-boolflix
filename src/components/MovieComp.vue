@@ -24,9 +24,9 @@ import CardComp from './CardComp.vue'
 div{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
     width: 80%;
     margin: auto;
+    align-items: stretch;
 }
 </style>

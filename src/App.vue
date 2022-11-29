@@ -27,12 +27,13 @@ export default {
   },
   methods: {
     searchTitle(text) {
+      this.films = []
       this.searchText = text,
       console.log(this.searchText);
       
       
       axios 
-           .get(`https://api.themoviedb.org/3/search/tv?api_key=${this.apiKey}&language=it_IT&query=${this.searchText}`)
+           .get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=it_IT&query=${this.searchText}`)
            .then( (response) => {
             console.log(response.data.results);
 

@@ -2,7 +2,9 @@
     <div class="card">
         <div>{{cardInfo.titolo}}</div>
         <div v-if="cardInfo.titoloOriginale != cardInfo.titolo">{{cardInfo.titoloOriginale}}</div>
-        <div>{{cardInfo.lingua}}</div>
+        <div>{{cardInfo.lingua}}
+            <img :src="`../assets/{{lingua}}.png`" alt="">
+        </div>
         <div>Voto: {{cardInfo.voto}}</div>
         <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="">
 
@@ -14,6 +16,11 @@
         name: 'CardComp',
         props: {
             cardInfo: Object
+        },
+        data() {
+            return {
+                flags: ['en', 'it', 'jp', 'fr', 'de', 'es', 'ko']
+            } 
         }
     }
 </script>
@@ -23,10 +30,11 @@
     width: calc(100% / 5);
     height: auto;
     background-color: lightgray;
-    margin: 5px;
+    margin: 10px;
     padding: 20px;
+    align-items: center;
     img{
-        width: 100px;
+        width: 150px;
     }
 }
 </style>
