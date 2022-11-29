@@ -19,5 +19,14 @@
 </script>
 
 <style lang="scss" scoped>
-
+.card{
+    width: calc(100% / 5);
+    height: auto;
+    background-color: lightgray;
+    margin: 5px;
+    padding: 20px;
+    img{
+        width: 100px;
+    }
+}
 </style>
