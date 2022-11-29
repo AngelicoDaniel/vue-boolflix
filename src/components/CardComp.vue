@@ -2,7 +2,8 @@
     <div class="card">
         <div>{{cardInfo.titolo}}</div>
         <div v-if="cardInfo.titoloOriginale != cardInfo.titolo">{{cardInfo.titoloOriginale}}</div>
-        <div>{{cardInfo.lingua}}
+        <!-- <div>{{cardInfo.lingua}} -->
+        <div v-if="flags.includes(cardInfo.lingua)">
             <img :src="`../assets/{{cardInfo.lingua}}.png`" alt="">
         </div>
         <div>Voto: {{cardInfo.voto}}</div>
