@@ -41,7 +41,8 @@ export default {
                 'titolo': elem.name,
                 'titoloOriginale': elem.original_name,
                 'lingua': elem.original_language,
-                'voto': elem.vote_average
+                'voto': elem.vote_average,
+                'img': elem.poster_path
               }
               this.films.push(movie)
             })
