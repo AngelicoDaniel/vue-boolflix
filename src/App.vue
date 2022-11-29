@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderComp/>
+    <HeaderComp @search="searchTitle"/>
     <MainComp/>
   </div>
 </template>
@@ -19,11 +19,16 @@ export default {
   data() {
    return {
     APIKey: '8570b8b0e80303c0c307748fd71cc35d',
-    search: '',
+    searchText: '',
     films: [],
     series: []
    }
-
+  },
+  methods: {
+    searchTitle(text) {
+      this.searchText = text,
+      console.log(this.searchText);
+    }
   }
 }
 </script>
