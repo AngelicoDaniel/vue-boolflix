@@ -1,10 +1,10 @@
 <template>
     <div class="card">
-        <div>{{nomeOggetto.titolo}}</div>
-        <div v-if="nomeOggetto.titoloOriginale != nomeOggetto.titolo">{{nomeOggetto.titoloOriginale}}</div>
-        <div>{{nomeOggetto.lingua}}</div>
-        <div>{{nomeOggetto.voto}}</div>
-        <img :src="`https://image.tmdb.org/t/p/w342${nomeOggetto.img}`" alt="">
+        <div>{{cardInfo.titolo}}</div>
+        <div v-if="cardInfo.titoloOriginale != cardInfo.titolo">{{cardInfo.titoloOriginale}}</div>
+        <div>{{cardInfo.lingua}}</div>
+        <div>Voto: {{cardInfo.voto}}</div>
+        <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="">
 
     </div>
 </template>
@@ -13,7 +13,7 @@
     export default {
         name: 'CardComp',
         props: {
-            nomeOggetto: Object
+            cardInfo: Object
         }
     }
 </script>

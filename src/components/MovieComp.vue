@@ -3,7 +3,7 @@
         <CardComp
         v-for="(elem, index) in films"
         :key="index"
-        :nomeOggetto="elem"
+        :cardInfo="elem"
         />
     </div>
 </template>
