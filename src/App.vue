@@ -31,10 +31,21 @@ export default {
       console.log(this.searchText);
       
       
-      axios //.get( `https://api.themoviedb.org/3/movie/550?api_key=${this.apiKey}&query=${this.searchText}&language=it-IT`)
+      axios 
            .get(`https://api.themoviedb.org/3/search/tv?api_key=${this.apiKey}&language=it_IT&query=${this.searchText}`)
            .then( (response) => {
             console.log(response.data.results);
+
+            response.data.results.forEach(elem =>{
+              let movie = {
+                'titolo': elem.name,
+                'titoloOriginale': elem.original_name,
+                'lingua': elem.original_language,
+                'voto': elem.vote_average
+              }
+              this.films.push(movie)
+            })
+            console.log(this.films);
            })
 
 
