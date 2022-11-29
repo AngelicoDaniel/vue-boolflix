@@ -1,8 +1,9 @@
 <template>
     <div class="card">
-        <div>{{titolo}}</div>
-        <div>{{lingua}}</div>
-        <div>{{voto}}</div>
+        <div>{{nomeOggetto.titolo}}</div>
+        <div>{{nomeOggetto.titoloOriginale}}</div>
+        <div>{{nomeOggetto.lingua}}</div>
+        <div>{{nomeOggetto.voto}}</div>
 
     </div>
 </template>
@@ -11,10 +12,7 @@
     export default {
         name: 'CardComp',
         props: {
-            titolo: String,
-            titoloOriginale: String,
-            lingua: String,
-            voto: Number
+            nomeOggetto: Object
         }
     }
 </script>

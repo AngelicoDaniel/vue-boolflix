@@ -3,10 +3,7 @@
         <CardComp
         v-for="(elem, index) in films"
         :key="index"
-        :titolo="elem.name"
-        :titoloOriginale="elem.original_name"
-        :lingua="elem.original_language"
-        :voto="elem.vote_average"
+        :nomeOggetto="elem"
         />
     </div>
 </template>

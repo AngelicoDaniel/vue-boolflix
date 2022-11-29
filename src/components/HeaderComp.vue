@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-danger">BOOLFLIX</h2>
-    <input type="text" v-model="searchText" @keyup.enter="$emit('search', searchText)">
+    <input type="text" v-model="searchText" @keyup="$emit('search', searchText)">
   </div>
 </template>
 
