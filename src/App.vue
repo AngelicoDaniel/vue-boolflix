@@ -8,7 +8,8 @@
 <script>
 import HeaderComp from './components/HeaderComp.vue'
 import MainComp from './components/MainComp.vue'
-//import axios from 'axios'
+import axios from 'axios'
+
 
 export default {
   name: 'App',
@@ -28,6 +29,14 @@ export default {
     searchTitle(text) {
       this.searchText = text,
       console.log(this.searchText);
+      
+      
+      axios.get( `https://api.themoviedb.org/3/movie/550?api_key=${this.APIKey}&query=${this.searchText}&language=it-IT` )
+           .then( (response) => {
+            console.log(response.data.response);
+           })
+
+
     }
   }
 }
