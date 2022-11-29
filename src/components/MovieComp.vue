@@ -1,17 +1,17 @@
 <template>
     <div>
-        <MovieComp/>
+        <CardComp/>
     </div>
 </template>
 
 <script>
-import MovieComp from './MovieComp.vue'
+import CardComp from './CardComp.vue'
+
     export default {
-        name: 'MainComp',
+        name: 'MovieComp',
         components: {
-            MovieComp
-        },
-        props: ['films']
+            CardComp
+        }
     }
 </script>
 
