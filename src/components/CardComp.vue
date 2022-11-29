@@ -39,10 +39,10 @@
     padding: 20px;
     align-items: center;
     .poster{
-        width: 150px;
+        width: 180px;
     }
     .flags{
-        width: 50px;
+        width: 30px;
     }
 }
 </style>
