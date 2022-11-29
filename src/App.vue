@@ -39,8 +39,8 @@ export default {
 
             response.data.results.forEach(elem =>{
               let movie = {
-                'titolo': elem.name,
-                'titoloOriginale': elem.original_name,
+                'titolo': elem.title,
+                'titoloOriginale': elem.original_title,
                 'lingua': elem.original_language,
                 'voto': elem.vote_average,
                 'img': elem.poster_path

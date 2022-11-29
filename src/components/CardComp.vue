@@ -3,7 +3,7 @@
         <div>{{cardInfo.titolo}}</div>
         <div v-if="cardInfo.titoloOriginale != cardInfo.titolo">{{cardInfo.titoloOriginale}}</div>
         <div>{{cardInfo.lingua}}
-            <img :src="`../assets/{{lingua}}.png`" alt="">
+            <img :src="`../assets/{{cardInfo.lingua}}.png`" alt="">
         </div>
         <div>Voto: {{cardInfo.voto}}</div>
         <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="">
