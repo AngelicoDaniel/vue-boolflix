@@ -1,5 +1,5 @@
 <template>
-    <div class="row gx-2">
+    <div class="row g-2">
         <CardComp
         v-for="(elem, index) in series"
         :key="index"

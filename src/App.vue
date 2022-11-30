@@ -1,7 +1,10 @@
-<template>
+<template class="bg-secondary">
   <div id="app" class="bg-secondary">
+    <div>
     <HeaderComp class="p-3 bg-dark" @search="searchTitle"/>
-    <MainComp class="bg-secondary" :films="films" :series="series"/>
+    <MainComp :films="films" :series="series"/>
+    </div>
+
   </div>
 </template>
 
@@ -89,6 +92,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  padding-bottom: 20px;
+  min-height: 100vh;
 
 }
 </style>
