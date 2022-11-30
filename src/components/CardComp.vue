@@ -8,21 +8,22 @@
                     <img :src="require(`../assets/img/${cardInfo.lingua}.png`)" alt="" class="flags">
                 </div>
                 <div v-else>
-                    <img src="../assets/not-found.png" alt="" class="not-found">
+                    <img src="../assets/missing-flag.png" alt="" class="not-found">
                 </div>
                 <div class="overview">
                     <span>Overview: {{cardInfo.overview}}</span>
                 </div>
                 <div>Voto: {{cardInfo.voto}}</div>
             </div>
-
-            <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
+            <img v-if="(cardInfo.img == null)" class="not-found" src="../assets/not-found.png" alt="">
+            <img v-else :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
         </div>  
     </div>
 
 </template>
 
 <script>
+
     export default {
         name: 'CardComp',
         props: {
@@ -48,7 +49,6 @@
         width: 100%;
         display: block;
     }
-    
     .flags{
         width: 30px;
     }
