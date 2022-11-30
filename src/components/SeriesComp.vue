@@ -1,12 +1,23 @@
 <template>
     <div>
-        <CardComp/>
+        <CardComp
+        v-for="(elem, index) in series"
+        :key="index"
+        :cardInfo="elem"
+        />
     </div>
 </template>
 
 <script>
+import CardComp from './CardComp.vue'
+
     export default {
-        name: 'SeriesComp'
+        name: 'SeriesComp',
+        components: {
+            CardComp
+        },
+        props: ['series']
+
     }
 </script>
 

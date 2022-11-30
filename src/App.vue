@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComp @search="searchTitle"/>
-    <MainComp :films="films"/>
+    <MainComp :films="films" :series="series"/>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
   methods: {
     searchTitle(text) {
       this.films = []
+      this.series = []
       this.searchText = text,
       console.log(this.searchText);
       
@@ -48,7 +49,25 @@ export default {
               this.films.push(movie)
             })
             console.log(this.films);
+           });
+      
+      axios
+           .get(`https://api.themoviedb.org/3/search/tv?api_key=${this.apiKey}&language=it_IT&query=${this.searchText}`)
+           .then( ( response) => {
+            console.log(response.data.results);
+
+            response.data.results.forEach(elem => {
+              let serie = {
+                'titolo': elem.name,
+                'titoloOriginale': elem.original_name,
+                'voto': elem.vote_average,
+                'img': elem.poster_path     
+              }
+              this.series.push(serie)
+            });
+            console.log(this.series);
            })
+      
 
 
     }
