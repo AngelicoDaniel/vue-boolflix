@@ -13,7 +13,7 @@
                 <div class="overview">
                     <span>Overview: {{cardInfo.overview}}</span>
                 </div>
-                <div>Voto: {{cardInfo.voto}}</div>
+                <div>Voto: {{Math.ceil(cardInfo.voto/2)}}</div>
             </div>
             <img v-if="(cardInfo.img == null)" class="not-found" src="../assets/not-found.png" alt="">
             <img v-else :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
