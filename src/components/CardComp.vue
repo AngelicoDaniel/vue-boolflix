@@ -11,7 +11,7 @@
                     <img src="../assets/missing-flag.png" alt="" class="not-found">
                 </div>
                 <div class="overview">
-                    <span>Overview: {{cardInfo.overview}}</span>
+                    <span>{{cardInfo.overview}}</span>
                 </div>
                 <div>Voto: {{Math.ceil(cardInfo.voto/2)}}</div>
             </div>
