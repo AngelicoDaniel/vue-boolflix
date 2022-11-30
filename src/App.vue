@@ -44,7 +44,8 @@ export default {
                 'titoloOriginale': elem.original_title,
                 'lingua': elem.original_language,
                 'voto': elem.vote_average,
-                'img': elem.poster_path
+                'img': elem.poster_path,
+                'overview': elem.overview  
               }
               this.films.push(movie)
             })
@@ -61,7 +62,8 @@ export default {
                 'titolo': elem.name,
                 'titoloOriginale': elem.original_name,
                 'voto': elem.vote_average,
-                'img': elem.poster_path     
+                'img': elem.poster_path,
+                'overview': elem.overview    
               }
               this.series.push(serie)
             });

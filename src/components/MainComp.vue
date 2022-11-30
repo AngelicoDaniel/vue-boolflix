@@ -24,7 +24,7 @@ import SeriesComp from './SeriesComp.vue'
 </script>
 
 <style lang="scss" scoped>
-*{
+div{
     color: white;
 }
 </style>
