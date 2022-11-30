@@ -26,5 +26,7 @@ import SeriesComp from './SeriesComp.vue'
 <style lang="scss" scoped>
 div{
     color: white;
+    width: 90%;
+    margin: auto;
 }
 </style>

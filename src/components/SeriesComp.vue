@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="row gx-2">
         <CardComp
         v-for="(elem, index) in series"
         :key="index"
@@ -22,12 +22,5 @@ import CardComp from './CardComp.vue'
 </script>
 
 <style lang="scss" scoped>
-div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
-    margin: auto;
-    align-items: stretch;
-}
+
 </style>

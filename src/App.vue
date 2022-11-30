@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-secondary">
     <HeaderComp class="p-3 bg-dark" @search="searchTitle"/>
-    <MainComp  class="bg-secondary" :films="films" :series="series"/>
+    <MainComp class="bg-secondary" :films="films" :series="series"/>
   </div>
 </template>
 
@@ -89,7 +89,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  height: 100vh;
+
 }
 </style>
