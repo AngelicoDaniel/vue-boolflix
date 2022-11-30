@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HeaderComp @search="searchTitle"/>
-    <MainComp :films="films" :series="series"/>
+    <HeaderComp class="p-3 bg-dark" @search="searchTitle"/>
+    <MainComp  class="bg-secondary" :films="films" :series="series"/>
   </div>
 </template>
 
@@ -88,6 +88,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
 }
 </style>

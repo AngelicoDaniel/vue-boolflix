@@ -1,6 +1,9 @@
 <template>
     <div>
+        <h2>FILM</h2>
         <MovieComp :films="films"/>
+
+        <h2 class="p-3">SERIES</h2>
         <SeriesComp :series="series"/>
     </div>
 </template>
@@ -21,5 +24,7 @@ import SeriesComp from './SeriesComp.vue'
 </script>
 
 <style lang="scss" scoped>
-
+*{
+    color: white;
+}
 </style>

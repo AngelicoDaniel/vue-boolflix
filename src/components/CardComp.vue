@@ -8,7 +8,7 @@
             <!-- <img :src=" '../assets/img/' + cardInfo.lingua + '.png' " height="100" width="100" alt=""/> -->
         </div>
         <div v-else>
-            <img src="../assets/not-found.png" alt="" class="flags">
+            <img src="../assets/not-found.png" alt="" class="not-found">
         </div>
         <div>Voto: {{cardInfo.voto}}</div>
         <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
@@ -34,15 +34,19 @@
 .card{
     width: calc(100% / 5);
     height: auto;
-    background-color: lightgray;
+    background-color: #212529;
     margin: 10px;
     padding: 20px;
     align-items: center;
+    border: 1px solid white;
     .poster{
-        width: 180px;
+        width: 200px;
     }
     .flags{
         width: 30px;
+    }
+    .not-found{
+        width: 50px;
     }
 }
 </style>
