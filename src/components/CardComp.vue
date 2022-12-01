@@ -11,7 +11,8 @@
                     <img src="../assets/missing-flag.png" alt="" class="not-found">
                 </div>
                 <div class="overview">
-                    <span>{{cardInfo.overview}}</span>
+                    <span v-if="cardInfo.overview == ''"></span>
+                    <span v-else>Overview: {{cardInfo.overview}}</span>
                 </div>
                 <div>Voto: {{Math.ceil(cardInfo.voto/2)}}</div>
             </div>
@@ -45,6 +46,7 @@
     justify-content: center;
     background-color: #212529;
     position: relative;
+    min-height: 380px;
     .poster{
         width: 100%;
         display: block;
@@ -57,7 +59,6 @@
     }
     .hover{
         display: none;
-        //display: block;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -65,6 +66,7 @@
         left: 0;
         overflow: auto;
         padding: 15px;
+        min-height: 0;
     }
     .overview{
         font-size: 12px;
