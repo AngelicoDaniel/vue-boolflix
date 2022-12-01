@@ -53,7 +53,7 @@
     justify-content: center;
     background-color: #212529;
     position: relative;
-    min-height: 376px;
+    min-height: 372px;
     .poster{
         width: 100%;
         display: block;
