@@ -8,13 +8,20 @@
                     <img :src="require(`../assets/img/${cardInfo.lingua}.png`)" alt="" class="flags">
                 </div>
                 <div v-else>
-                    <img src="../assets/missing-flag.png" alt="" class="not-found">
+                    <img src="../assets/missing-flag.png" alt="" class="flags">
                 </div>
-                <div class="overview">
+                <div class="overview p-2">
                     <span v-if="cardInfo.overview == ''"></span>
                     <span v-else>Overview: {{cardInfo.overview}}</span>
                 </div>
-                <div>Voto: {{Math.ceil(cardInfo.voto/2)}}</div>
+                <div class="d-flex align-items-center justify-content-around"> 
+                        <div v-for="(elem, index) in Math.ceil(cardInfo.voto/2)" :key="index"> 
+                        <span>
+                            <img src="../assets/star.png" alt="star" class="star">
+                        </span>
+                    </div>
+                </div>
+
             </div>
             <img v-if="(cardInfo.img == null)" class="not-found" src="../assets/not-found.png" alt="">
             <img v-else :src="`https://image.tmdb.org/t/p/w342${cardInfo.img}`" alt="" class="poster">
@@ -46,16 +53,20 @@
     justify-content: center;
     background-color: #212529;
     position: relative;
-    min-height: 380px;
+    min-height: 376px;
     .poster{
         width: 100%;
         display: block;
     }
     .flags{
-        width: 30px;
+        height: 50px;
     }
     .not-found{
-        width: 50px;
+        height: 50px;
+    }
+    .star{
+        width: 20px;
+        background-color: #212529;
     }
     .hover{
         display: none;

@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <h2 class="text-danger">BOOLFLIX</h2>
-    <input type="text" v-model="searchText" @keyup="$emit('search', searchText)">
+  <div class="d-flex justify-content-around align-items-center">
+    <div>
+       <h2 class="text-danger">BOOLFLIX</h2>
+    </div>
+   
+    <input type="text" placeholder="cerca film e serie tv" v-model="searchText" @keyup="$emit('search', searchText)">
   </div>
 </template>
 
